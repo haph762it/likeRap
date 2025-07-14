@@ -1,143 +1,154 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <title>LikeRap</title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="csstoanbai.css" rel="stylesheet" />
     <script src="js/function.js"></script>
 </head>
+
 <body>
-    <table width="1100px" align="center">
-        <tr>
-            <td colspan="2" background="hinhanh/tren.png" width="1100px" height="200px" align="right" valign="top">
-                <div id="position">
-                    <a href="index.html">
-                        <img src="hinhanh/likerap.jpg" width="150px" />
+    <div class="container">
+        <header class="site-header">
+            <div id="position">
+                <a href="index.html">
+                    <img src="hinhanh/likerap.jpg" class="logo" />
+                </a>
+            </div>
+            <div class="auth-links">
+                <a href="dangnhap.html">Đăng nhập</a>
+                <span>/</span>
+                <a href="dangki.html">Đăng ký</a>
+            </div>
+        </header>
+
+        <main class="site-main">
+            <aside class="side-nav">
+                <a href="index.html"><img src="hinhanh/moi.jpg" /></a>
+                <a href="baihat.html"><img src="hinhanh/baihat.jpg" /></a>
+                <a href="rapper.html"><img src="hinhanh/rapper.jpg" /></a>
+                <a href="hottuan.html"><img src="hinhanh/hottuan.jpg" /></a>
+                <a href="hotthang.html"><img src="hinhanh/hotthang.jpg" /></a>
+                <a href="yeucaunhac.html"><img src="hinhanh/yeucaunhac.jpg" /></a>
+            </aside>
+
+            <section class="content">
+                <div class="search-container">
+                    <form method="get" action="baihat.html" autocomplete="off" class="search-form">
+                        <input name="timkiem" type="text" placeholder="Tìm kiếm bài hát, nghệ sỹ..."
+                            class="search-input" />
+                        <button type="submit" class="search-button" aria-label="Tìm kiếm"></button>
+                    </form>
+                </div>
+
+                <div class="audio-player-container">
+                    <audio id="nhac" autoplay="autoplay" controls="controls" src=" "></audio>
+                </div>
+
+                <div class="song-list">
+                    <div class="column">
+                        <ul>
+                            <div id="kieudaudongli">
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/consetheoai-thangzet.mp3">
+                                    <li> Con sẽ theo ai - Thangzet</li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/TheGioiNho-Dn.mp3">
+                                    <li> Thế giới nhỏ - DN</li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/NamXuong-Black_Bi.mp3">
+                                    <li> Nằm xuống - Blackbi </li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/NeuEmConNho-Kaisoul.mp3">
+                                    <li> Nếu em còn nhớ - Kaisoul </li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/NuCuoiPhanDien-Dn.mp3">
+                                    <li> Nụ cười phản diện - Dn </li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/NghiLucSong-Dn.kute.mp3">
+                                    <li> Nghị lực cuộc sống - Dn Kute </li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/TaoCan-VTHieu.mp3">
+                                    <li> Tao cần - VT Hiếu </li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/VeNha-Da_Lab.mp3">
+                                    <li> Về nhà - Da Lab </li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/XinLoiMe-Phutoro.mp3">
+                                    <li> Xin lỗi mẹ - Phutoro </li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/lu2-Bdt.mp3">
+                                    <li> Lú - Bdt </li>
+                                </a>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <div id="kieudaudongli">
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/ForeverLove-VietUnderground.mp3">
+                                    <li> Forever love - Việt Underground</li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/LyCayBong-Pjpo.mp3">
+                                    <li> Lý cây bông - Pjpo</li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/DieuMayKhongBiet-Kyo.mp3">
+                                    <li> Điều mày không biết - Kyo </li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/DoiThuong3-DatManiac.mp3">
+                                    <li> Đời thường 3 - Datmaniac </li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/baicatuoitre-JG_Kid.mp3">
+                                    <li> Bài ca tuổi trẻ - JG kid </li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/GiotLeChuHe-Maxobyo.mp3">
+                                    <li> Giọt lệ chú hề - Maxobyo</li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/mo-den.mp3">
+                                    <li> Mơ - Đen </li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/Lk0bd-Bred.mp3">
+                                    <li> Lk0bd - Bred </li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/laimotlannua-kiban.mp3">
+                                    <li> Lại một lần nữa - Kiban </li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/duanhauditron-den.mp3">
+                                    <li> Đưa nhau đi trốn - Đen </li>
+                                </a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="xem-them">
+                    <a href="baihat.html">
+                        <img src="hinhanh/xemthem.png" width="140" />
                     </a>
                 </div>
-                <a href="dangnhap.html">
-                    <font size="5" color="#FA8258" face="monospace"><i> Đăng nhâp</i></font>
-                </a>
-                <font size="5" color="#FA8258" face="monospace"> / </font>
-                <a href="dangki.html">
-                    <font size="5" color="#FA8258" face="monospace"><i>Đăng ký </i></font>
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td valign="top" width="150px">
-                    <a href="index.html">
-                        <img src="hinhanh/moi.jpg" />
-                    </a>
-                    <a href="baihat.html">
-                        <img src="hinhanh/baihat.jpg" />
-                    </a>
-                    <a href="rapper.html">
-                        <img src="hinhanh/rapper.jpg" />
-                    </a>
-                    <a href="hottuan.html">
-                        <img src="hinhanh/hottuan.jpg" />
-                    </a>
-                    <a href="hotthang.html">
-                        <img src="hinhanh/hotthang.jpg" />
-                    </a>
-                    <a href="yeucaunhac.html">
-                        <img src="hinhanh/yeucaunhac.jpg" />
-                    </a>
-            </td>
-            <td valign="top" align="left" bgcolor="#e0dbdb">
-                <table>
-                    <tr>
-                        <td align="center" colspan="2">
-                            <form id="searchbox" method="get" action="baihat.html" autocomplete="off">
-                                <input name="timkiem" type="text" size="25" placeholder="Tìm kiếm..." />
-                                <input id="nuttimkiem" type="submit" value=" " />
-                            </form>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right">
-                            <audio id="nhac" autoplay="autoplay" controls="controls" src=" "></audio>
+            </section>
+        </main>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="475px" valign="top">
-                            <ul>
-                                <div id="kieudaudongli">
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/consetheoai-thangzet.mp3"> <li> Con sẽ theo ai - Thangzet</li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/TheGioiNho-Dn.mp3"> <li> Thế giới nhỏ - DN</li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/NamXuong-Black_Bi.mp3"> <li> Nằm xuống - Blackbi </li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/NeuEmConNho-Kaisoul.mp3"> <li> Nếu em còn nhớ - Kaisoul </li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/NuCuoiPhanDien-Dn.mp3"> <li> Nụ cười phản diện - Dn </li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/NghiLucSong-Dn.kute.mp3"> <li> Nghị lực cuộc sống - Dn Kute </li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/TaoCan-VTHieu.mp3"> <li> Tao cần - VT Hiếu </li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/VeNha-Da_Lab.mp3"> <li> Về nhà  - Da Lab </li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/XinLoiMe-Phutoro.mp3"> <li> Xin lỗi mẹ - Phutoro </li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/lu2-Bdt.mp3"> <li> Lú - Bdt </li> </a>
-                                </div>
-                            </ul>
-                        </td>
-                        <td width="475px" valign="top">
-                            <ul>
-                                <div id="kieudaudongli">
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/ForeverLove-VietUnderground.mp3"> <li> Forever love - Việt Underground</li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/LyCayBong-Pjpo.mp3"> <li> Lý cây bông - Pjpo</li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/DieuMayKhongBiet-Kyo.mp3"> <li> Điều mày không biết - Kyo </li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/DoiThuong3-DatManiac.mp3"> <li> Đời thường 3 - Datmaniac </li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/baicatuoitre-JG_Kid.mp3"> <li> Bài ca tuổi trẻ - JG kid </li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/GiotLeChuHe-Maxobyo.mp3"> <li>  Giọt lệ chú hề - Maxobyo</li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/mo-den.mp3"> <li> Mơ - Đen </li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/Lk0bd-Bred.mp3"> <li> Lk0bd - Bred </li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/laimotlannua-kiban.mp3"> <li> Lại một lần nữa - Kiban </li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/duanhauditron-den.mp3"> <li> Đưa nhau đi trốn - Đen </li> </a>
-                                </div>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" align="center">
-                            <a href="baihat.html">
-                                <img src="hinhanh/xemthem.png" width="140" />
-                            </a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <table>
-                    <tr>
-                        <td width="333px" valign="top" align="center">
-                            <h2> <font color="white"> Kết Nối Với Chúng Tôi</font> </h2>
-                            <a href="https://www.facebook.com/haph762">
-                                <img src="hinhanh/facebook.jpg" width="55px" height="25px" />
-                            </a>
-                            <br />
-                            <br />
-                            <a href="index.html">
-                                <img src="hinhanh/gmail.png" width="55px" height="25px" />
-                            </a>
-                        </td>
-                        <td width="333px" valign="top" align="center">
-                            <h2> <font color="white"> Liên Hệ </font> </h2>
-                            <a href="index.html">
-                                <font color="white"> Góp Ý </font>
-                            </a>
-                        </td>
-                        <td width="240px" valign="top" align="center">
-                            <h2> <font color="white"> Liên Hệ Quảng Cáo </font> </h2>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center">
-                <font color="white"> coppyright &copy; 2016 Bản Quyền Thuộc Về LikeRap</font>
-            </td>
-        </tr>
-    </table>
+        <footer class="site-footer-bottom">
+            <div class="footer-column">
+                <h2>Kết Nối Với Chúng Tôi</h2>
+                <a href="https://www.facebook.com/haph762"><img src="hinhanh/facebook.jpg" /></a>
+                <br /><br />
+                <a href="index.html"><img src="hinhanh/gmail.png" /></a>
+            </div>
+            <div class="footer-column">
+                <h2>Liên Hệ</h2>
+                <a href="index.html">Góp Ý</a>
+            </div>
+            <div class="footer-column">
+                <h2>Liên Hệ Quảng Cáo</h2>
+            </div>
+        </footer>
+        <div class="copyright">
+            coppyright &copy; 2016 Bản Quyền Thuộc Về LikeRap
+        </div>
+    </div>
 </body>
+
 </html>

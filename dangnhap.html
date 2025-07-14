@@ -1,121 +1,83 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <title>LikeRap</title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/function.js"></script>
     <link href="csstoanbai.css" rel="stylesheet" />
 </head>
+
 <body>
-    <table width="1100px" align="center" >
-        <tr>
-            <td colspan="2" background="hinhanh/tren.png" width="1100px" height="200px" align="right" valign="top">
-                <div id="position">
-                    <a href="index.html">
-                        <img src="hinhanh/likerap.jpg" width="150px" />
-                    </a>
-                </div>
-                <a href="dangnhap.html">
-                    <font size="5" color="#FA8258" face="monospace"><i> Đăng nhâp</i></font>
+    <div class="container">
+        <header class="site-header">
+            <div id="position">
+                <a href="index.html">
+                    <img src="hinhanh/likerap.jpg" class="logo" />
                 </a>
-                <font size="5" color="#FA8258" face="monospace"> / </font>
-                <a href="dangki.html">
-                    <font size="5" color="#FA8258" face="monospace"><i>Đăng ký </i></font>
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td valign="top" width="150px">
-                    <a href="index.html">
-                        <img src="hinhanh/moi.jpg" />
-                    </a>
-                    <a href="baihat.html">
-                        <img src="hinhanh/baihat.jpg" />
-                    </a>
-                    <a href="rapper.html">
-                        <img src="hinhanh/rapper.jpg" />
-                    </a>
-                    <a href="hottuan.html">
-                        <img src="hinhanh/hottuan.jpg" />
-                    </a>
-                    <a href="hotthang.html">
-                        <img src="hinhanh/hotthang.jpg" />
-                    </a>
-                    <a href="yeucaunhac.html">
-                        <img src="hinhanh/yeucaunhac.jpg" />
-                    </a>
-            </td>
-            <td valign="top" align="center" bgcolor="#e0dbdb">
-                <font color="white"> <h2>Đăng nhập </h2></font>
-                    <form id="dangnhap" action="phanha762@gamil.com" method="post">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h3><font color="white">Tên đăng nhập</font></h3>
-                                </td>
-                                <td>
-                                    <input type="text" name="tendangnhap" value="" size="27" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3><font color="white">Mật khẩu</font></h3>
-                                </td>
-                                <td>
-                                    <input type="password" name="matkhau" value="" size="27" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" align="center">
-                                    <input type="radio" name="quenmatkhau" value="" /><font color="white"> Nhớ mật khẩu</font>
-                                   
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4><font color="white"><a href="quenmatkhau.html">Quên mật khẩu?</a></font></h4>
-                                </td>
-                                <td>
-                                    <input type="submit" name="name" value="Đăng nhập" />
-                                </td>
-                            </tr>
-                        </table>
+            </div>
+            <div class="auth-links">
+                <a href="dangnhap.html">Đăng nhập</a>
+                <span>/</span>
+                <a href="dangki.html">Đăng ký</a>
+            </div>
+        </header>
+
+        <main class="site-main">
+            <aside class="side-nav">
+                <a href="index.html"><img src="hinhanh/moi.jpg" /></a>
+                <a href="baihat.html"><img src="hinhanh/baihat.jpg" /></a>
+                <a href="rapper.html"><img src="hinhanh/rapper.jpg" /></a>
+                <a href="hottuan.html"><img src="hinhanh/hottuan.jpg" /></a>
+                <a href="hotthang.html"><img src="hinhanh/hotthang.jpg" /></a>
+                <a href="yeucaunhac.html"><img src="hinhanh/yeucaunhac.jpg" /></a>
+            </aside>
+
+            <section class="content">
+                <div class="form-container">
+                    <form id="dangnhap" action="yourmail@gmail.com" method="post" class="auth-form">
+                        <h2>Đăng nhập</h2>
+                        <div class="form-group">
+                            <label for="username">Tên đăng nhập</label>
+                            <input type="text" id="username" name="tendangnhap" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Mật khẩu</label>
+                            <input type="password" id="password" name="matkhau" />
+                        </div>
+                        <div class="form-options">
+                            <label>
+                                <input type="checkbox" name="remember" /> Nhớ mật khẩu
+                            </label>
+                            <a href="quenmatkhau.html">Quên mật khẩu?</a>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="name" value="Đăng nhập" class="form-submit-button" />
+                        </div>
                     </form>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <table>
-                    <tr>
-                        <td width="333px" valign="top" align="center">
-                            <h2> <font color="white"> Kết Nối Với Chúng Tôi</font> </h2>
-                            <a href="https://www.facebook.com/haph762">
-                                <img src="hinhanh/facebook.jpg" width="55px" height="25px" />
-                            </a>
-                                <br/>
-                                <br/>
-                            <a href="index.html">
-                                <img src="hinhanh/gmail.png" width="55px" height="25px" />
-                            </a>
-                        </td>
-                        <td width="333px" valign="top" align="center">
-                            <h2> <font color="white"> Liên Hệ </font> </h2>
-                            <a href="likerap.html">
-                                <font color="white"> Góp Ý </font>
-                            </a>
-                        </td>
-                        <td width="240px" valign="top" align="center">
-                            <h2> <font color="white"> Liên Hệ Quảng Cáo </font> </h2>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center">
-                <font color="white"> coppyright &copy; 2016 Bản Quyền Thuộc Về LikeRap</font>
-            </td>
-        </tr>
-    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer-bottom">
+            <div class="footer-column">
+                <h2>Kết Nối Với Chúng Tôi</h2>
+                <a href="https://www.facebook.com/haph762"><img src="hinhanh/facebook.jpg" /></a>
+                <a href="index.html"><img src="hinhanh/gmail.png" /></a>
+            </div>
+            <div class="footer-column">
+                <h2>Liên Hệ</h2>
+                <a href="index.html">Góp Ý</a>
+            </div>
+            <div class="footer-column">
+                <h2>Liên Hệ Quảng Cáo</h2>
+            </div>
+        </footer>
+        <div class="copyright">
+            coppyright &copy; 2016 Bản Quyền Thuộc Về LikeRap
+        </div>
+    </div>
 </body>
+
 </html>

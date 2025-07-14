@@ -1,129 +1,106 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <title>LikeRap</title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="csstoanbai.css" rel="stylesheet" />
     <script src="js/function.js"></script>
 </head>
+
 <body>
-    <table width="1100px" align="center">
-        <tr>
-            <td colspan="2" background="hinhanh/tren.png" width="1100px" height="200px" align="right" valign="top">
-                <div id="position">
-                    <a href="index.html">
-                        <img src="hinhanh/likerap.jpg" width="150px" />
-                    </a>
+    <div class="container">
+        <header class="site-header">
+            <div id="position">
+                <a href="index.html">
+                    <img src="hinhanh/likerap.jpg" class="logo" />
+                </a>
+            </div>
+            <div class="auth-links">
+                <a href="dangnhap.html">Đăng nhập</a>
+                <span>/</span>
+                <a href="dangki.html">Đăng ký</a>
+            </div>
+        </header>
+
+        <main class="site-main">
+            <aside class="side-nav">
+                <a href="index.html"><img src="hinhanh/moi.jpg" /></a>
+                <a href="baihat.html"><img src="hinhanh/baihat.jpg" /></a>
+                <a href="rapper.html"><img src="hinhanh/rapper.jpg" /></a>
+                <a href="hottuan.html"><img src="hinhanh/hottuan.jpg" /></a>
+                <a href="hotthang.html"><img src="hinhanh/hotthang.jpg" /></a>
+                <a href="yeucaunhac.html"><img src="hinhanh/yeucaunhac.jpg" /></a>
+            </aside>
+
+            <section class="content">
+                <div class="page-title">
+                    <h1>Bảng xếp hạng tuần</h1>
                 </div>
-                <a href="dangnhap.html">
-                    <font size="5" color="#FA8258" face="monospace"><i> Đăng nhâp</i></font>
-                </a>
-                <font size="5" color="#FA8258" face="monospace"> / </font>
-                <a href="dangki.html">
-                    <font size="5" color="#FA8258" face="monospace"><i>Đăng ký </i></font>
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td valign="top" width="150px">
-                    <a href="index.html">
-                        <img src="hinhanh/moi.jpg" />
-                    </a>
-                    <a href="baihat.html">
-                        <img src="hinhanh/baihat.jpg" />
-                    </a>
-                    <a href="rapper.html">
-                        <img src="hinhanh/rapper.jpg" />
-                    </a>
-                    <a href="hottuan.html">
-                        <img src="hinhanh/hottuan.jpg" />
-                    </a>
-                    <a href="hotthang.html">
-                        <img src="hinhanh/hotthang.jpg" />
-                    </a>
-                    <a href="yeucaunhac.html">
-                        <img src="hinhanh/yeucaunhac.jpg" />
-                    </a>
-            </td>
-            <td valign="top" bgcolor="#e0dbdb">
-                <table>
-                    <tr>
-                        <td colspan="2" align="center">
-                            <h1>
-                                <font color="white">Bảng xếp hạng tuần</font>
-                            </h1>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="240px" align="left">
-                            <audio id="nhac" autoplay="autoplay" controls="controls" src=" "></audio>
-                            <ol type="1">
-                                <div id="xephang">
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/baicatuoitre-JG_Kid.mp3"> <li> Bài ca tuổi trẻ - JG kid </li> </a>
 
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/NamXuong-Black_Bi.mp3"> <li> Nằm xuống - Blackbi </li> </a>
+                <div class="chart-layout">
+                    <div class="chart-list">
+                        <audio id="nhac" autoplay="autoplay" controls="controls" src=" "></audio>
+                        <ol type="1">
+                            <div id="xephang">
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/baicatuoitre-JG_Kid.mp3">
+                                    <li> Bài ca tuổi trẻ - JG kid </li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/NamXuong-Black_Bi.mp3">
+                                    <li> Nằm xuống - Blackbi </li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/LyCayBong-Pjpo.mp3">
+                                    <li> Lý cây bông - Pjpo</li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/TheGioiNho-Dn.mp3">
+                                    <li> Thế giới nhỏ - DN</li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="trangchu/XinLoiMe-Phutoro.mp3">
+                                    <li> Xin lỗi mẹ - Phutoro </li>
+                                </a>
+                            </div>
+                        </ol>
+                    </div>
 
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/LyCayBong-Pjpo.mp3"> <li> Lý cây bông - Pjpo</li> </a>
+                    <div class="slideshow-container">
+                        <img name="anhdongtuan" src="anhdongtuan/anh1.jpg" />
+                        <script type="text/javascript">
+                            window.onload = function () {
+                                setTimeout("chuyenhinh()", 2000);
+                            }
+                            var current = 1;
+                            var numIMG = 5;
+                            function chuyenhinh() {
+                                current++;
+                                if (current > numIMG) { current = 1; }
+                                document.images['anhdongtuan'].src = 'anhdongtuan/anh' + current + '.jpg';
+                                setTimeout("chuyenhinh()", 2000);
+                            }
+                        </script>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/TheGioiNho-Dn.mp3"> <li> Thế giới nhỏ - DN</li> </a>
-
-                                    <a href="#" onclick="doinhac(this)" rel="trangchu/XinLoiMe-Phutoro.mp3"> <li> Xin lỗi mẹ - Phutoro </li> </a>
-                                </div>
-                            </ol>
-                        </td>
-                        <td valign="top">
-                            <img name="anhdongtuan" src="anhdongtuan/anh1.jpg" width="590px" />
-                            <script type="text/javascript">
-                                window.onload = function () {
-                                    setTimeout("chuyenhinh()", 2000);
-                                }
-                                var current = 1;
-                                var numIMG = 5;
-                                function chuyenhinh() {
-                                    current++;
-                                    document.images['anhdongtuan'].src = 'anhdongtuan/anh' + current + '.jpg';
-                                    if (current == numIMG) {current=0;}
-                                        setTimeout("chuyenhinh()", 2000);
-                                }
-                            </script>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <table>
-                    <tr>
-                        <td width="333px" valign="top" align="center">
-                            <h2> <font color="white"> Kết Nối Với Chúng Tôi</font> </h2>
-                            <a href="https://www.facebook.com/haph762">
-                                <img src="hinhanh/facebook.jpg" width="55px" height="25px" />
-                            </a>
-                            <br />
-                            <br />
-                            <a href="index.html">
-                                <img src="hinhanh/gmail.png" width="55px" height="25px" />
-                            </a>
-                        </td>
-                        <td width="333px" valign="top" align="center">
-                            <h2> <font color="white"> Liên Hệ </font> </h2>
-                            <a href="index.html">
-                                <font color="white"> Góp Ý </font>
-                            </a>
-                        </td>
-                        <td width="240px" valign="top" align="center">
-                            <h2> <font color="white"> Liên Hệ Quảng Cáo </font> </h2>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center">
-                <font color="white"> coppyright &copy; 2016 Bản Quyền Thuộc Về LikeRap</font>
-            </td>
-        </tr>
-    </table>
+        <footer class="site-footer-bottom">
+            <div class="footer-column">
+                <h2>Kết Nối Với Chúng Tôi</h2>
+                <a href="https://www.facebook.com/haph762"><img src="hinhanh/facebook.jpg" /></a>
+                <a href="index.html"><img src="hinhanh/gmail.png" /></a>
+            </div>
+            <div class="footer-column">
+                <h2>Liên Hệ</h2>
+                <a href="index.html">Góp Ý</a>
+            </div>
+            <div class="footer-column">
+                <h2>Liên Hệ Quảng Cáo</h2>
+            </div>
+        </footer>
+        <div class="copyright">
+            coppyright &copy; 2016 Bản Quyền Thuộc Về LikeRap
+        </div>
+    </div>
 </body>
+
 </html>

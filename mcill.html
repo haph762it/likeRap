@@ -1,115 +1,90 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <title>LikeRap</title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="csstoanbai.css" rel="stylesheet" />
     <script src="js/function.js"></script>
 </head>
-<body>
-    <table width="1100px" align="center">
-        <tr>
-            <td colspan="2" background="hinhanh/tren.png" width="1100px" height="200px" align="right" valign="top">
-                <div id="position">
-                    <a href="index.html">
-                        <img src="hinhanh/likerap.jpg" width="150px" />
-                    </a>
-                </div>
-                <a href="dangnhap.html">
-                    <font size="5" color="#FA8258" face="monospace"><i> Đăng nhâp</i></font>
-                </a>
-                <font size="5" color="#FA8258" face="monospace"> / </font>
-                <a href="dangki.html">
-                    <font size="5" color="#FA8258" face="monospace"><i>Đăng ký </i></font>
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td valign="top" width="150px">
-                    <a href="index.html">
-                        <img src="hinhanh/moi.jpg" />
-                    </a>
-                    <a href="baihat.html">
-                        <img src="hinhanh/baihat.jpg" />
-                    </a>
-                    <a href="rapper.html">
-                        <img src="hinhanh/rapper.jpg" />
-                    </a>
-                    <a href="hottuan.html">
-                        <img src="hinhanh/hottuan.jpg" />
-                    </a>
-                    <a href="hotthang.html">
-                        <img src="hinhanh/hotthang.jpg" />
-                    </a>
-                    <a href="yeucaunhac.html">
-                        <img src="hinhanh/yeucaunhac.jpg" />
-                    </a>
-            </td>
-            <td valign="top" align="left" bgcolor="#e0dbdb">
-                <table>
-                    <tr>
-                        <td colspan="3" align="center">
-                            <h1> <span style="color: white">Artist nổi bật</span> </h1>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="5px">
 
-                        </td>
-                        <td width="450px" align="center">
-                            <h2><span style="font-family:Courier">Mc Ill</span></h2>
-                            <img src="rapper/mcill/mc-ill.1693.jpg" width="360px" height="360px" />
-                        </td>
-                        <td valign="top">
-                            <span style="color:white; font-family: Courier">
-                                (Nếu bạn có thông tin về Mc Ill hãy liên hệ với chúng tôi)
-                            </span>
-                            <h3> Bài hát nổi bật:</h3>
-                            <br />
-                            <audio id="nhac" autoplay="autoplay" controls="controls" src=" "></audio>
-                            <br />
-                                <div id="kieudaudongli">
-                                    <a href="#" onclick="doinhac(this)" rel="rapper/mcill/phonho.mp3"> <li> Phố nhỏ</li> </a>
-                                    <a href="#" onclick="doinhac(this)" rel="rapper/mcill/truyencogrimm.mp3"> <li> Truyện cổ Grimm</li> </a>
-                                </div>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <table>
-                    <tr>
-                        <td width="333px" valign="top" align="center">
-                            <h2> <font color="white"> Kết Nối Với Chúng Tôi</font> </h2>
-                            <a href="index.html">
-                                <img src="hinhanh/facebook.jpg" width="55px" height="25px" />
-                            </a>
-                            <br />
-                            <br />
-                            <a href="index.html">
-                                <img src="hinhanh/gmail.png" width="55px" height="25px" />
-                            </a>
-                        </td>
-                        <td width="333px" valign="top" align="center">
-                            <h2> <font color="white"> Liên Hệ </font> </h2>
-                            <a href="index.html">
-                                <font color="white"> Góp Ý </font>
-                            </a>
-                        </td>
-                        <td width="240px" valign="top" align="center">
-                            <h2> <font color="white"> Liên Hệ Quảng Cáo </font> </h2>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center">
-                <font color="white"> coppyright &copy; 2016 Bản Quyền Thuộc Về LikeRap</font>
-            </td>
-        </tr>
-    </table>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <div id="position">
+                <a href="index.html">
+                    <img src="hinhanh/likerap.jpg" class="logo" />
+                </a>
+            </div>
+            <div class="auth-links">
+                <a href="dangnhap.html">Đăng nhập</a>
+                <span>/</span>
+                <a href="dangki.html">Đăng ký</a>
+            </div>
+        </header>
+
+        <main class="site-main">
+            <aside class="side-nav">
+                <a href="index.html"><img src="hinhanh/moi.jpg" /></a>
+                <a href="baihat.html"><img src="hinhanh/baihat.jpg" /></a>
+                <a href="rapper.html"><img src="hinhanh/rapper.jpg" /></a>
+                <a href="hottuan.html"><img src="hinhanh/hottuan.jpg" /></a>
+                <a href="hotthang.html"><img src="hinhanh/hotthang.jpg" /></a>
+                <a href="yeucaunhac.html"><img src="hinhanh/yeucaunhac.jpg" /></a>
+            </aside>
+
+            <section class="content">
+                <div class="page-title">
+                    <h1>Artist nổi bật</h1>
+                </div>
+
+                <div class="artist-profile-layout">
+                    <div class="artist-image-column">
+                        <h2>Mc Ill</h2>
+                        <img src="rapper/mcill/mc-ill.1693.jpg" alt="Rapper Mc Ill" />
+                    </div>
+
+                    <div class="artist-details-column">
+                        <div class="artist-bio">
+                            <p>(Nếu bạn có thông tin về Mc Ill hãy liên hệ với chúng tôi)</p>
+                        </div>
+
+                        <h3>Bài hát nổi bật:</h3>
+                        <audio id="nhac" autoplay="autoplay" controls="controls" src=" "></audio>
+                        <ul class="artist-song-list">
+                            <div id="kieudaudongli">
+                                <a href="#" onclick="doinhac(this)" rel="rapper/mcill/phonho.mp3">
+                                    <li> Phố nhỏ</li>
+                                </a>
+                                <a href="#" onclick="doinhac(this)" rel="rapper/mcill/truyencogrimm.mp3">
+                                    <li> Truyện cổ Grimm</li>
+                                </a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer-bottom">
+            <div class="footer-column">
+                <h2>Kết Nối Với Chúng Tôi</h2>
+                <a href="https://www.facebook.com/haph762"><img src="hinhanh/facebook.jpg" /></a>
+                <a href="index.html"><img src="hinhanh/gmail.png" /></a>
+            </div>
+            <div class="footer-column">
+                <h2>Liên Hệ</h2>
+                <a href="index.html">Góp Ý</a>
+            </div>
+            <div class="footer-column">
+                <h2>Liên Hệ Quảng Cáo</h2>
+            </div>
+        </footer>
+        <div class="copyright">
+            coppyright &copy; 2016 Bản Quyền Thuộc Về LikeRap
+        </div>
+    </div>
 </body>
+
 </html>

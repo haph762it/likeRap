@@ -1,194 +1,580 @@
-﻿body {
+﻿/* --- CÀI ĐẶT CHUNG --- */
+body {
     background-image: url(hinhanh/background.jpg);
-    background-attachment:fixed;
-    background-position:center;
-    background-size:cover;
-}
-#kieudaudongli
- {
-    float:left;
-    list-style-image: url('hinhanh/list.png');
-    line-height:20px;
-    font-size:large;
-}
-tr td a {
-    text-decoration:none;
-}
-#xephang
- {
-    float:left;
-    line-height:80px;
-    font-size:x-large;
-}
-#position {
-    position:fixed;
-    position:center;
-    top:auto;
-}
-#searchbox {
-    width: 280px;
-    background: no-repeat;
-    background-image: url('hinhanh/timkiem.png');
-}
-
-#searchbox input {
-    outline: none;
-}
-#searchbox input[type="text"] {
-    background: transparent;
-    border: 0px;
-    font-family: Consolas;
-    font-size: 20px;
-        color: #f2f2f2 !important;
-        padding: 10px 35px 10px 20px;
-        width: 220px;
-}
-#nuttimkiem {
-    background: no-repeat;
-    margin-left: -40px;
-    margin-top: 5px;
-    border-width: 0px;
-    width: 40px;
-    height: 50px;
-    background-image: url('hinhanh/icon_timkiem.png');
-}
-#zoom img{
-    -webkit-transition-duration: 0.5s; 
-    -moz-transition-duration: 0.5s; 
-    -o-transition-duration: 0.5s;
-}
-#zoom img:hover{
-    -webkit-transform:scale(2.0);
-    -moz-transform:scale(2.0); 
-    -o-transform:scale(2.0); 
-    box-shadow: 0px 0px 50px gray;
-    opacity: 1;
-}
-#dangki {
-    width: 650px;
-    background: no-repeat;
-    background-image: url('hinhanh/dangki.jpg');
+    background-attachment: fixed;
+    background-position: center;
     background-size: cover;
+    font-family: sans-serif;
+    /* Sử dụng font dễ đọc hơn */
+    color: white;
 }
 
-#dangki input {
-    outline: groove;
-}
-#dangki input[type="text"] {
-    background: transparent;
-    border: 0px;
-    font-family: Consolas;
-    font-size: 20px;
-        color: #FFFFFF !important;
-        padding: 10px 35px 10px 20px;
-        width: 220px;
-}
-#dangki input[type="password"] {
-    background: transparent;
-    border: 0px;
-    font-family: Consolas;
-    font-size: 20px;
-        color: #FFFFFF !important;
-        padding: 10px 35px 10px 20px;
-        width: 220px;
-}
-#dangki input[type="submit"] {
-    background: transparent;
-    border: 0px;
-    font-family: Consolas;
-    font-size: 20px;
-        color: #F7BE81 !important;
-        padding: 10px 35px 10px 20px;
-        width: 220px;
-}
-#select {
-    padding:3px;
-    margin: 0;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    border-radius:4px;
-    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-    background: #f8f8f8;
-    color:#888;
-    border:groove;
-    display: inline-block;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    cursor:pointer;
-}
-#dangnhap {
-    width: 550px;
-    background: no-repeat;
-    background-image: url('hinhanh/dangnhap.jpg');
-    background-size: cover;
-}
-
-#dangnhap input {
-    outline: groove;
-}
-#dangnhap input[type="text"] {
-    background: transparent;
-    border: 0px;
-    font-family: Consolas;
-    font-size: 20px;
-        color: #FFFFFF !important;
-        padding: 10px 35px 10px 20px;
-        width: 220px;
-}
-#dangnhap input[type="password"] {
-    background: transparent;
-    border: 0px;
-    font-family: Consolas;
-    font-size: 20px;
-        color: #FFFFFF !important;
-        padding: 10px 35px 10px 20px;
-        width: 220px;
-}
-#dangnhap input[type="submit"] {
-    background: transparent;
-    border: 0px;
-    font-family: Consolas;
-    font-size: 20px;
-        color: #F7BE81 !important;
-        padding: 10px 35px 10px 20px;
-        width: 220px;
-}
-#yeucaunhac {
-    width: 100%;
-}
-.uix-input {
-    width: 95% !important;
-    height: 40px;
-    font-size: 15px;
-    border: 1px solid #EEE;
-    border-bottom-color: #CCC;
-    border-radius: 0;
-    outline: 0;
-    padding: 0 0 0 15px;
-    margin-bottom: -1px !important;
-    font-family: Consolas;
-}
-.uix-textarea {
-    padding-top: 12px;
-    height: 200px;
-    font-family: Consolas;
-}
-#submit {
-    width: 32%;
-    height: 40px;
-    color: #FFF;
-    font-size: 15px;
-    background: #F7BE81;
-    outline: 0;
-    border: 0;
-    margin: 10px auto 15px;
-    display: block;
-}
-#submit:hover {
-    background: #bb7224;
-}
-#text{
+a {
     text-decoration: none;
+    color: #FA8258;
+    /* Màu link mặc định */
+}
+
+ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+/* --- LAYOUT CHÍNH --- */
+.container {
+    max-width: 1100px;
+    /* Giữ chiều rộng tối đa */
+    margin: 0 auto;
+    /* Căn giữa trang */
+    padding: 0 15px;
+    /* Thêm khoảng đệm hai bên */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Thêm nền mờ để dễ đọc chữ */
+}
+
+.site-header {
+    display: flex;
+    /* Sử dụng flexbox */
+    justify-content: space-between;
+    /* Đẩy các item ra hai bên */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    background: url(hinhanh/tren.png) no-repeat center center/cover;
+    height: 200px;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.auth-links a {
+    font-size: 1.2rem;
+    font-family: monospace;
+}
+
+.site-main {
+    display: flex;
+}
+
+.side-nav {
+    width: 150px;
+    flex-shrink: 0;
+    /* Không cho phép co lại */
+}
+
+.side-nav img {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.content {
+    flex-grow: 1;
+    /* Cho phép giãn ra để lấp đầy không gian */
+    padding: 20px;
+    background-color: #e0dbdb;
+}
+
+.audio-player-container {
+    text-align: right;
+    margin: 10px 0;
+}
+
+#nhac {
+    width: 100%;
+    max-width: 450px;
+}
+
+/* --- DANH SÁCH BÀI HÁT --- */
+.song-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* Cho phép xuống hàng trên màn hình nhỏ */
+    gap: 20px;
+    /* Khoảng cách giữa các cột */
+}
+
+.column {
+    flex: 1;
+    /* Hai cột bằng nhau */
+    min-width: 250px;
+    /* Chiều rộng tối thiểu trước khi xuống hàng */
+}
+
+#kieudaudongli {
+    list-style-image: url('hinhanh/list.png');
+}
+
+#kieudaudongli li {
+    line-height: 1.5;
+    font-size: 1rem;
+    color: #333;
+}
+
+#kieudaudongli a {
+    color: #333;
+}
+
+.xem-them {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* --- FOOTER --- */
+.site-footer-bottom {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    text-align: center;
+    margin: 10px;
+}
+
+.footer-column h2 {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.footer-column a {
+    color: white;
+}
+
+.footer-column img {
+    width: 55px;
+    height: 25px;
+}
+
+.copyright {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+
+/* --- BƯỚC 4: THÊM MEDIA QUERIES CHO MOBILE --- */
+@media (max-width: 768px) {
+    .site-main {
+        flex-direction: column;
+        /* Chuyển layout chính thành 1 cột */
+    }
+
+    .side-nav {
+        width: 100%;
+        display: flex;
+        /* Hiển thị menu ngang */
+        overflow-x: auto;
+        /* Cho phép cuộn ngang nếu không đủ chỗ */
+        padding-bottom: 10px;
+    }
+
+    .side-nav a {
+        flex: 0 0 100px;
+        /* Đặt kích thước cho các item menu */
+    }
+
+    .site-header {
+        height: 150px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .auth-links a {
+        font-size: 1rem;
+    }
+
+    .song-list {
+        flex-direction: column;
+        /* Các cột bài hát xếp chồng lên nhau */
+    }
+
+    .site-footer-bottom {
+        flex-direction: column;
+        /* Các cột footer xếp chồng lên nhau */
+    }
+}
+
+/* --- CSS TỐI ƯU CHO Ô TÌM KIẾM --- */
+.search-container {
+    display: flex;
+    justify-content: center;
+    /* Đưa form tìm kiếm ra giữa */
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    /* Căn chỉnh các item bên trong theo chiều dọc */
+    width: 100%;
+    max-width: 500px;
+    /* Giới hạn chiều rộng tối đa */
+    background-color: #fff;
+    border-radius: 50px;
+    /* Bo tròn các góc để tạo thành hình viên thuốc */
+    padding: 5px 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    /* Thêm đổ bóng mềm */
+}
+
+.search-form .search-input {
+    flex-grow: 1;
+    /* Cho phép ô input lấp đầy không gian còn trống */
+    border: none;
+    background: transparent;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    /* Bỏ viền khi focus */
+}
+
+.search-form .search-button {
+    background-color: #F7BE81;
+    border: none;
+    border-radius: 50%;
+    /* Bo tròn nút thành hình tròn */
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    /* Không cho phép nút bị co lại */
+    cursor: pointer;
+    background-image: url('hinhanh/icon_timkiem.png');
+    /* Sử dụng lại icon cũ của bạn */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    /* Điều chỉnh kích thước icon */
+    transition: background-color 0.3s;
+}
+
+.search-form .search-button:hover {
+    background-color: #bb7224;
+    /* Đổi màu khi di chuột qua */
+}
+
+
+/* --- CSS THÊM CHO TRANG RAPPER --- */
+.page-title {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.artist-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* Cho phép các item xuống hàng */
+    justify-content: center;
+    /* Căn giữa các item */
+    gap: 15px;
+    /* Khoảng cách giữa các item */
+}
+
+.artist-card {
+    width: 200px;
+    /* Chiều rộng mỗi thẻ rapper */
+    text-align: center;
+    transition: transform 0.3s;
+    /* Hiệu ứng khi di chuột */
+}
+
+.artist-card:hover {
+    transform: scale(1.05);
+    /* Phóng to nhẹ khi di chuột */
+}
+
+.artist-card img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    /* Đảm bảo ảnh không bị méo */
+    border-radius: 50%;
+    /* Bo tròn ảnh đại diện */
+    border: 3px solid white;
+}
+
+.artist-card h2 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.artist-card a {
+    color: #333;
+}
+
+/* --- Chỉnh lại Media Queries cho lưới rapper --- */
+@media (max-width: 480px) {
+    .artist-card {
+        width: calc(50% - 10px);
+        /* Hiển thị 2 cột trên màn hình nhỏ */
+    }
+
+    .artist-card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .artist-card h2 {
+        font-size: 1rem;
+    }
+}
+
+/* --- CSS THÊM CHO TRANG BẢNG XẾP HẠNG (HOTTUAN/HOTTHANG) --- */
+.chart-layout {
+    display: flex;
+    flex-wrap: wrap;
+    /* Cho phép xuống hàng trên màn hình nhỏ */
+    gap: 20px;
+    /* Khoảng cách giữa 2 cột */
+}
+
+.chart-list {
+    flex: 1;
+    /* Cột chiếm phần không gian co giãn */
+    min-width: 240px;
+    /* Chiều rộng tối thiểu */
+}
+
+.chart-list ol {
+    padding-left: 30px;
+}
+
+#xephang li {
+    line-height: 2.5;
+    /* Tăng khoảng cách dòng cho dễ đọc */
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#xephang a {
+    color: #333;
+}
+
+.slideshow-container {
+    flex: 2;
+    /* Cột chiếm nhiều không gian hơn */
+    min-width: 300px;
+}
+
+.slideshow-container img {
+    width: 100%;
+    /* Ảnh sẽ luôn vừa với container */
+    height: auto;
+    /* Chiều cao tự động để không vỡ ảnh */
+    object-fit: cover;
+}
+
+
+/* --- CSS THÊM CHO TRANG YÊU CẦU NHẠC --- */
+
+.request-info {
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.request-info ul {
+    padding-left: 20px;
+}
+
+.request-form-container {
+    max-width: 600px;
+    /* Giới hạn chiều rộng của form */
+    margin: 0 auto;
+    /* Căn giữa form */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.request-form .form-input,
+.request-form .form-textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    /* Quan trọng để padding không làm tăng width */
+    font-family: Consolas, monospace;
+}
+
+.request-form .form-textarea {
+    height: 150px;
+    resize: vertical;
+    /* Cho phép người dùng thay đổi chiều cao */
+}
+
+.request-form .form-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #F7BE81;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.request-form .form-submit:hover {
+    background-color: #bb7224;
+}
+
+/* --- CSS THÊM CHO TRANG ĐĂNG NHẬP / ĐĂNG KÝ --- */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-form {
+    width: 100%;
+    max-width: 400px;
+    /* Giới hạn chiều rộng form */
+    padding: 30px;
+    background: url('hinhanh/dangnhap.jpg') no-repeat center center/cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.auth-form h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: white;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-group input::placeholder {
+    color: #ddd;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.form-options a {
+    color: #F7BE81;
+}
+
+.form-submit-button {
+    width: 100%;
+    padding: 12px;
+    background: #F7BE81;
+    border: none;
+    border-radius: 4px;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-submit-button:hover {
+    background-color: #bb7224;
+}
+
+/* --- CSS THÊM CHO TRANG CHI TIẾT RAPPER --- */
+.artist-profile-layout {
+    display: flex;
+    flex-wrap: wrap;
+    /* Cho phép xuống hàng trên màn hình nhỏ */
+    gap: 30px;
+    /* Khoảng cách giữa cột ảnh và cột thông tin */
+}
+
+.artist-image-column {
+    flex: 1;
+    /* Cột ảnh co giãn */
+    min-width: 280px;
+    /* Chiều rộng tối thiểu */
+    text-align: center;
+}
+
+.artist-image-column h2 {
+    font-family: Courier, monospace;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.artist-image-column img {
+    width: 100%;
+    max-width: 360px;
+    /* Giữ kích thước ảnh tối đa */
+    height: auto;
+    border-radius: 8px;
+}
+
+.artist-details-column {
+    flex: 2;
+    /* Cột thông tin chiếm nhiều không gian hơn */
+    min-width: 300px;
+    color: #333;
+    /* Màu chữ cho dễ đọc */
+}
+
+.artist-bio {
+    font-family: Courier, monospace;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.artist-details-column h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.artist-details-column #nhac {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Tái sử dụng style cho danh sách bài hát */
+.artist-song-list ul {
+    list-style: none;
+    padding-left: 0;
 }
