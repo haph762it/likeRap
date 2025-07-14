@@ -1,0 +1,194 @@
+﻿body {
+    background-image: url(hinhanh/background.jpg);
+    background-attachment:fixed;
+    background-position:center;
+    background-size:cover;
+}
+#kieudaudongli
+ {
+    float:left;
+    list-style-image: url('hinhanh/list.png');
+    line-height:20px;
+    font-size:large;
+}
+tr td a {
+    text-decoration:none;
+}
+#xephang
+ {
+    float:left;
+    line-height:80px;
+    font-size:x-large;
+}
+#position {
+    position:fixed;
+    position:center;
+    top:auto;
+}
+#searchbox {
+    width: 280px;
+    background: no-repeat;
+    background-image: url('hinhanh/timkiem.png');
+}
+
+#searchbox input {
+    outline: none;
+}
+#searchbox input[type="text"] {
+    background: transparent;
+    border: 0px;
+    font-family: Consolas;
+    font-size: 20px;
+        color: #f2f2f2 !important;
+        padding: 10px 35px 10px 20px;
+        width: 220px;
+}
+#nuttimkiem {
+    background: no-repeat;
+    margin-left: -40px;
+    margin-top: 5px;
+    border-width: 0px;
+    width: 40px;
+    height: 50px;
+    background-image: url('hinhanh/icon_timkiem.png');
+}
+#zoom img{
+    -webkit-transition-duration: 0.5s; 
+    -moz-transition-duration: 0.5s; 
+    -o-transition-duration: 0.5s;
+}
+#zoom img:hover{
+    -webkit-transform:scale(2.0);
+    -moz-transform:scale(2.0); 
+    -o-transform:scale(2.0); 
+    box-shadow: 0px 0px 50px gray;
+    opacity: 1;
+}
+#dangki {
+    width: 650px;
+    background: no-repeat;
+    background-image: url('hinhanh/dangki.jpg');
+    background-size: cover;
+}
+
+#dangki input {
+    outline: groove;
+}
+#dangki input[type="text"] {
+    background: transparent;
+    border: 0px;
+    font-family: Consolas;
+    font-size: 20px;
+        color: #FFFFFF !important;
+        padding: 10px 35px 10px 20px;
+        width: 220px;
+}
+#dangki input[type="password"] {
+    background: transparent;
+    border: 0px;
+    font-family: Consolas;
+    font-size: 20px;
+        color: #FFFFFF !important;
+        padding: 10px 35px 10px 20px;
+        width: 220px;
+}
+#dangki input[type="submit"] {
+    background: transparent;
+    border: 0px;
+    font-family: Consolas;
+    font-size: 20px;
+        color: #F7BE81 !important;
+        padding: 10px 35px 10px 20px;
+        width: 220px;
+}
+#select {
+    padding:3px;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #f8f8f8;
+    color:#888;
+    border:groove;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    cursor:pointer;
+}
+#dangnhap {
+    width: 550px;
+    background: no-repeat;
+    background-image: url('hinhanh/dangnhap.jpg');
+    background-size: cover;
+}
+
+#dangnhap input {
+    outline: groove;
+}
+#dangnhap input[type="text"] {
+    background: transparent;
+    border: 0px;
+    font-family: Consolas;
+    font-size: 20px;
+        color: #FFFFFF !important;
+        padding: 10px 35px 10px 20px;
+        width: 220px;
+}
+#dangnhap input[type="password"] {
+    background: transparent;
+    border: 0px;
+    font-family: Consolas;
+    font-size: 20px;
+        color: #FFFFFF !important;
+        padding: 10px 35px 10px 20px;
+        width: 220px;
+}
+#dangnhap input[type="submit"] {
+    background: transparent;
+    border: 0px;
+    font-family: Consolas;
+    font-size: 20px;
+        color: #F7BE81 !important;
+        padding: 10px 35px 10px 20px;
+        width: 220px;
+}
+#yeucaunhac {
+    width: 100%;
+}
+.uix-input {
+    width: 95% !important;
+    height: 40px;
+    font-size: 15px;
+    border: 1px solid #EEE;
+    border-bottom-color: #CCC;
+    border-radius: 0;
+    outline: 0;
+    padding: 0 0 0 15px;
+    margin-bottom: -1px !important;
+    font-family: Consolas;
+}
+.uix-textarea {
+    padding-top: 12px;
+    height: 200px;
+    font-family: Consolas;
+}
+#submit {
+    width: 32%;
+    height: 40px;
+    color: #FFF;
+    font-size: 15px;
+    background: #F7BE81;
+    outline: 0;
+    border: 0;
+    margin: 10px auto 15px;
+    display: block;
+}
+#submit:hover {
+    background: #bb7224;
+}
+#text{
+    text-decoration: none;
+}
